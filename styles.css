@@ -1,0 +1,130 @@
+/* Importa la fuente cursiva 'Dancing Script' de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+/* Variables CSS para facilitar cambios */
+:root {
+    --color-principal: #FFC0CB; /* Rosa Chicle / Pastel */
+    --color-secundario: #F08080; /* Rosa Coral claro */
+    --color-fondo: #FFF0F5; /* Blanco Rosado muy suave */
+    --color-texto: #4B0082; /* Púrpura oscuro para buen contraste */
+    --fuente-cursiva: 'Dancing Script', cursive;
+}
+
+body {
+    font-family: var(--fuente-cursiva);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    text-align: center; /* Centra el contenido general */
+}
+
+header {
+    background-color: var(--color-principal);
+    color: var(--color-texto);
+    padding: 20px 0;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 700;
+}
+
+h2 {
+    color: var(--color-secundario);
+    font-size: 2em;
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px dashed var(--color-principal);
+    display: inline-block;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+}
+
+/* Estilo para cada sección de la biografía */
+.bio-item {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: left; /* Alinea el texto del contenido a la izquierda */
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el texto y la imagen */
+    gap: 30px; /* Espacio entre el texto y la imagen */
+}
+
+.content-wrapper p {
+    flex: 1; /* El párrafo ocupa la mayor parte del espacio */
+    font-size: 1.3em;
+}
+
+.image-container {
+    flex-shrink: 0; /* Evita que la imagen se encoja */
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 50%; /* Hace la imagen circular */
+    border: 5px solid var(--color-principal);
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
+    display: block;
+}
+
+/* Resumen en Video */
+.video-summary {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--color-principal);
+    border-radius: 15px;
+    margin-top: 40px;
+}
+
+.video-summary iframe {
+    max-width: 100%;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Pie de página */
+footer {
+    background-color: var(--color-secundario);
+    color: white;
+    padding: 10px 0;
+    font-size: 0.9em;
+    font-weight: 400; /* Lo hacemos menos 'cursiva' para que sea más legible */
+}
+
+/* Media query para dispositivos más pequeños (móviles) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+    .content-wrapper {
+        flex-direction: column; /* Apila el texto y la imagen */
+        text-align: center;
+    }
+    .image-container {
+        width: 180px;
+        height: 180px;
+        margin-top: 15px;
+    }
+}
